@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Adicionar Filme</title>
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="/styles.css" />
+
+        <!-- jQuery e tema -->
+        <script src="/jquery-3.7.1.js"></script>
+        <script src="/theme.js"></script>
+    </head>
+    <body>
+
+        <button id="botaoAlternarTema" onclick="toggleTheme()" aria-label="Alternar tema">Modo Escuro</button>
+
+        <div class="container">
+            <h1>Adicionar Novo Filme</h1>
+
+            <form id="formAdicionarFilme">
+                <label for="titulo">Título:</label>
+                <input type="text" id="titulo" name="titulo" required />
+
+                <label for="sinopse">Sinopse:</label>
+                <input type="text" id="sinopse" name="sinopse" required />
+
+                <label for="genero">Gênero:</label>
+                <input type="text" id="genero" name="genero" required />
+
+                <label for="anoLancamento">Ano de Lançamento:</label>
+                <input type="number" id="anoLancamento" name="anoLancamento" required />
+
+                <button type="submit" class="botao-principal">Adicionar Filme</button>
+            </form>
+        </div>
+
+        <!-- Scripts -->
+        <script src="/add-filme.js"></script>
+    </body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Listagem de Análises</title>
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="/styles.css" />
+
+        <!-- jQuery e tema -->
+        <script src="/jquery-3.7.1.js"></script>
+        <script src="/theme.js"></script>
+    </head>
+    <body>
+        <!-- Botão alternar tema -->
+        <button id="botaoAlternarTema" onclick="toggleTheme()" aria-label="Alternar tema">
+            Modo Escuro
+        </button>
+
+        <div class="container">
+            <h1>Listagem de Análises</h1>
+
+            <!-- Container que receberá os cards via JS -->
+            <div id="analises-lista" class="analises-container">
+                <!-- Os cards serão inseridos aqui pelo list.js -->
+            </div>
+        </div>
+
+        <!-- Scripts -->
+        <script src="/list.js"></script>
+    </body>
+</html>

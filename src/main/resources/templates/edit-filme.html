@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Editar Filme</title>
+        <link rel="stylesheet" href="/styles.css" />
+    </head>
+
+    <body>
+
+        <!-- Botão alternar tema -->
+        <button id="botaoAlternarTema" class="botao-secundario" onclick="toggleTheme()" aria-label="Alternar tema">
+            Modo Escuro
+        </button>
+
+        <div class="container">
+            <h1>Editar Filme</h1>
+
+            <form id="editFilmeForm">
+                <label for="titulo">Título:</label>
+                <input type="text" id="titulo" name="titulo" />
+
+                <label for="sinopse">Sinopse:</label>
+                <input type="text" id="sinopse" name="sinopse" />
+
+                <label for="genero">Gênero:</label>
+                <input type="text" id="genero" name="genero" />
+
+                <label for="anoLancamento">Ano de Lançamento:</label>
+                <input type="number" id="anoLancamento" name="anoLancamento" />
+
+                <button type="submit" class="botao-principal">Salvar Alterações</button>
+            </form>
+        </div>
+
+        <script src="/jquery-3.7.1.js"></script>
+        <script src="/edit-filme.js"></script>
+        <script src="/theme.js"></script>
+
+    </body>
+
+</html>

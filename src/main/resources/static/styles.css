@@ -1,0 +1,414 @@
+/* ======================================================
+   🎬 MOVIEAPP — CSS ESTILO YOUTUBE FINAL 
+   ====================================================== */
+
+/* ==============================
+   🎨 Variáveis Globais
+   ============================== */
+:root {
+    --cor-principal: #e50914;
+    --cor-principal-hover: #b20710;
+    --cor-detalhes: #007bff;
+    --cor-detalhes-hover: #0056b3;
+    --cor-editar: #28a745;
+    --cor-editar-hover: #1e7e34;
+    --cor-excluir: #dc3545;
+    --cor-excluir-hover: #a71d2a;
+    --cor-claro: rgba(255,255,255,0.9);
+    --cor-escuro: rgba(50,50,50,0.85);
+    --texto-claro: #000;
+    --texto-escuro: #e5e5e5;
+    --branco: #fff;
+    --raio: 8px;
+    --gap: 16px;
+    --max-container: 1200px;
+    --max-campo: 400px;
+    --avatar-size: 50px;
+}
+
+/* ==============================
+   🖼 Fundo com imagem borrada
+   ============================== */
+body::before {
+    content:"";
+    position: fixed;
+    inset:0;
+    background: url('/img/movieapp.png') center/cover no-repeat;
+    filter: blur(5px) brightness(0.7);
+    z-index: -1;
+}
+
+/* ==============================
+   🌗 Base e Tema Claro/Escuro
+   ============================== */
+body {
+    margin:0;
+    font-family: Arial, sans-serif;
+    transition:0.25s;
+}
+
+body.light {
+    background: var(--cor-claro);
+    color: var(--texto-claro);
+}
+
+body.dark {
+    background: var(--cor-escuro);
+    color: var(--texto-escuro);
+}
+
+/* ==============================
+   📦 Container central
+   ============================== */
+.container {
+    max-width: var(--max-container);
+    width: 90%;
+    margin: 40px auto;
+    padding: var(--gap);
+    background: rgba(60,60,60,0.9);
+    border-radius: var(--raio);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.6);
+}
+
+/* ==============================
+   🔘 Botões
+   ============================== */
+button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: var(--raio);
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+    font-size: 14px;
+}
+
+.botao-principal {
+    background: var(--cor-principal);
+    color: var(--branco);
+}
+.botao-principal:hover {
+    background: var(--cor-principal-hover);
+}
+
+.botao-detalhes {
+    background: var(--cor-detalhes);
+    color: var(--branco);
+}
+.botao-detalhes:hover {
+    background: var(--cor-detalhes-hover);
+}
+
+.botao-editar {
+    background: var(--cor-editar);
+    color: var(--branco);
+}
+.botao-editar:hover {
+    background: var(--cor-editar-hover);
+}
+
+.botao-excluir {
+    background: var(--cor-excluir);
+    color: var(--branco);
+}
+.botao-excluir:hover {
+    background: var(--cor-excluir-hover);
+}
+
+/* ==============================
+   📝 Formulários e Inputs
+   ============================== */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--gap);
+}
+
+form label {
+    font-weight: bold;
+    font-size: 18px;
+    color: var(--branco);
+    text-align: center;
+}
+
+form input, form select, textarea, .busca-container input[type="text"] {
+    width: 100%;
+    max-width: var(--max-campo);
+    padding: 12px;
+    border-radius: var(--raio);
+    border: 1px solid #ccc;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+body.dark input, body.dark select, body.dark textarea, body.dark .busca-container input {
+    background: #444;
+    border-color: #666;
+    color: var(--texto-escuro);
+}
+
+body.dark ::placeholder {
+    color: #ccc;
+}
+
+/* ==============================
+   🔍 Busca
+   ============================== */
+.busca-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--gap);
+    margin-top: 20px;
+}
+.busca-container label {
+    font-weight: bold;
+    font-size: 18px;
+    color: inherit;
+}
+
+/* ==============================
+   🔗 Menu de Navegação — links estilizados como botões
+   ============================== */
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--branco);
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    padding: 10px 20px;
+    border-radius: var(--raio);
+    font-weight: bold;
+    transition: 0.3s;
+    display: inline-block;
+}
+
+nav ul li a:hover {
+    background: linear-gradient(135deg, #0056b3, #003f7f);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+/* ==============================
+   🗃️ Tabela centralizada e espaçada
+   ============================== */
+.container table {
+    width: 90%;
+    margin: 0 auto 20px auto;
+    border-collapse: collapse; /* necessário para linhas de grade */
+    text-align: center;
+    color: var(--texto-escuro);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* sombra suave para destaque */
+}
+
+.container table th,
+.container table td {
+    padding: 12px 15px;
+    vertical-align: middle;
+    border: 1px solid rgba(200,200,200,0.3); /* linhas entre colunas e linhas */
+    border-radius: 4px;
+    background-color: rgba(255,255,255,0.05); /* leve fundo para modernidade */
+}
+
+body.dark .container table th,
+body.dark .container table td {
+    border-color: rgba(255,255,255,0.15); /* linhas visíveis no dark */
+    background-color: rgba(255,255,255,0.05);
+}
+
+.container table th {
+    font-weight: bold;
+    background-color: rgba(0,0,0,0.1); /* cabeçalho diferenciado */
+}
+
+.container table td a button {
+    margin: 0 4px;
+}
+
+.container table th,
+.container table td {
+    border-radius: 6px;
+}
+
+/* ==============================
+   🃏 Cards de Análises – estilo YouTube
+   ============================== */
+.analises-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 20px;
+}
+
+.analise-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    background: rgba(70,70,70,0.9);
+    border-radius: var(--raio);
+    padding: 16px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    transition: 0.3s;
+    overflow: hidden;
+}
+
+body.dark .analise-card {
+    background: rgba(70,70,70,0.9);
+    color: var(--texto-escuro);
+}
+
+.analise-card:hover {
+    box-shadow: 0 4px 16px rgba(0,0,0,0.35);
+}
+
+.analise-card::before {
+    content: '👤';
+    display: inline-block;
+    width: var(--avatar-size);
+    height: var(--avatar-size);
+    flex-shrink: 0;
+    border-radius: 50%;
+    background: #888;
+    text-align: center;
+    line-height: var(--avatar-size);
+    font-size: 24px;
+    color: #fff;
+}
+
+.analise-conteudo {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.analise-meta {
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+.analise-meta span {
+    margin-right: 12px;
+    font-size: 14px;
+    color: #ccc;
+}
+
+.analise-comentario {
+    font-size: 15px;
+    line-height: 1.4;
+    margin-bottom: 8px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.analise-card.expanded .analise-comentario {
+    -webkit-line-clamp: unset;
+}
+
+.analise-card .ler-mais {
+    background: transparent;
+    border: none;
+    color: var(--cor-principal);
+    font-weight: bold;
+    cursor: pointer;
+    padding: 0;
+    font-size: 14px;
+    margin-bottom: 4px;
+}
+
+.analise-card .ler-mais:hover {
+    text-decoration: underline;
+}
+
+.analise-acoes {
+    display: flex;
+    gap: 8px;
+    margin-top: 4px;
+}
+
+.analise-acoes button {
+    padding: 4px 10px;
+    font-size: 13px;
+}
+
+/* ==============================
+   🏷 Títulos
+   ============================== */
+h1 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: var(--gap);
+}
+
+/* ==============================
+   🎬 Detalhes do Filme — centralizado
+   ============================== */
+.detalhes-filme {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    font-size: 16px;
+    color: inherit;
+}
+
+.detalhes-filme p {
+    margin: 0;
+    text-align: center;
+}
+
+.detalhes-filme strong {
+    margin-right: 6px;
+    color: var(--cor-principal);
+}
+
+/* ==============================
+   📱 Responsividade
+   ============================== */
+@media(max-width: 1024px){
+    .container{
+        width: 95%;
+        margin: 20px auto;
+        padding: 12px;
+    }
+    table{
+        max-width: 100%;
+        font-size: 14px;
+    }
+    th, td {
+        padding: 8px;
+    }
+    form input, form select, textarea{
+        font-size: 14px;
+    }
+    .analise-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .analise-card::before {
+        margin-bottom: 8px;
+    }
+    nav ul {
+        flex-direction: column;
+        gap: 12px;
+        align-items: center;
+    }
+    nav ul li a {
+        width: 200px;
+        text-align: center;
+    }
+}

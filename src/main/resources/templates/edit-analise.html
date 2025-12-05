@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Editar Análise</title>
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="/styles.css"/>
+
+
+
+
+        <!-- jQuery -->
+        <script src="/jquery-3.7.1.js"></script>
+        <script src="/theme.js"></script>
+    </head>
+
+    <body>
+        <button id="botaoAlternarTema" onclick="toggleTheme()" aria-label="Alternar tema">
+            Modo Escuro
+        </button>
+
+        <div class="container">
+            <h1>Editar Análise</h1>
+
+            <form id="editAnaliseForm">
+                <label for="autor">Autor:</label>
+                <input type="text" id="autor" name="autor" required />
+
+                <label for="comentario">Comentário:</label>
+                <textarea id="comentario" name="comentario" required></textarea>
+
+                <button type="submit" class="botao-principal">Salvar Alterações</button>
+            </form>
+        </div>
+
+        <!-- Scripts -->
+        <script src="/edit-analise.js"></script>
+    </body>
+
+</html>

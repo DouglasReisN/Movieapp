@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Adicionar Análise</title>
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="/styles.css" />
+
+        <!-- jQuery e tema -->
+        <script src="/jquery-3.7.1.js"></script>
+        <script src="/theme.js"></script>
+    </head>
+    <body>
+
+        <button id="botaoAlternarTema" onclick="toggleTheme()" aria-label="Alternar tema">Modo Escuro</button>
+
+        <div class="container"> <!-- pedindo para adicionar referencia  -->
+            <h1>Adicionar Análise</h1>
+
+            <form id="addAnaliseForm">
+                <label for="autor">Autor:</label>
+                <input type="text" id="autor" name="autor" required />
+
+                <label for="comentario">Comentário:</label>
+                <textarea id="comentario" name="comentario" required></textarea>
+
+                <button type="submit" class="botao-principal">Adicionar Análise</button> <!-- pedindo para adicionar referencia  -->
+
+            </form>
+        </div>
+
+        <!-- Scripts -->
+        <script src="/add-analise.js"></script>
+    </body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Filmes e Análises</title>
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="/styles.css" />
+
+        <!-- jQuery -->
+        <script src="/jquery-3.7.1.js"></script>
+    </head>
+    <body>
+        <!-- Botão alternar tema com classe secundária -->
+        <button id="botaoAlternarTema" class="botao-secundario" onclick="toggleTheme()" aria-label="Alternar tema">
+            Modo Escuro
+        </button>
+
+        <main>
+            <h1>Bem-vindo ao Sistema de Filmes e Análises</h1>
+
+            <nav>
+                <ul>
+                    <li><a href="/filmes">Lista de Filmes</a></li>
+                    <li><a href="/analises">Análises</a></li>
+                    <li><a href="/add-filme">Adicionar Filme</a></li>
+                    <li><a href="/add-analise">Adicionar Análise</a></li>
+                </ul>
+            </nav>
+
+            <!-- Bloco de busca estilizado -->
+            <div class="busca-container">
+                <label for="campo-busca">Buscar filme por título:</label>
+                <input type="text" id="campo-busca" list="sugestoes" placeholder="Digite o nome do filme" />
+                <datalist id="sugestoes"></datalist>
+                <!-- Botão busca com classe principal -->
+                <button id="botao-buscar" class="botao-principal">Buscar</button>
+                <p id="mensagem-erro"></p>
+            </div>
+        </main>
+
+        <!-- JS -->
+        <script src="/list.js"></script>
+        <script src="/theme.js"></script>
+    </body>
+</html>
