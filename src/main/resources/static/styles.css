@@ -188,7 +188,7 @@ nav ul {
 nav ul li a {
     text-decoration: none;
     color: var(--branco);
-    background: linear-gradient(135deg, #007bff, #0056b3);
+    background: linear-gradient(135deg, #e50914, #b20710);
     padding: 10px 20px;
     border-radius: var(--raio);
     font-weight: bold;
@@ -197,9 +197,9 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    background: linear-gradient(135deg, #0056b3, #003f7f);
+    background: linear-gradient(135deg, #b20710, #7a040b);
     transform: translateY(-2px);
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
 }
 
 /* ==============================
